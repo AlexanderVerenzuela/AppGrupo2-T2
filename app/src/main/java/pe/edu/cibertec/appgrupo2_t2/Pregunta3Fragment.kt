@@ -30,17 +30,18 @@ class Pregunta3Fragment : Fragment() {
 
     private fun obtenerListaFrutas():List<Fruta>{
         val nombres = listOf(
-            "Apple", "Banana", "Strawberry", "Orange"
-            , "Grape", "Mango", "Pineapple", "Papaya"
-            , "Watermelon", "Melon", "Peach", "Plum"
-            , "Kiwi", "Pear", "Mandarin", "Fig", "granadilla"
-            , "Passionfruit", "Soursop", "Cherimoya"
+            "Manzana", "Platano", "Fresa", "Naranja"
+            , "Uva", "Mango", "Piña", "Papaya"
+            , "Melon", "Sandia", "Durazno", "Ciruela"
+            , "Kiwi", "Pera", "Mandarina", "Higo", "Granadilla"
+            , "Maracuya", "Guanabana", "Chirimoya"
         )
         return nombres.mapIndexed { index,nombre ->
+            val idFruta = index + 1
             Fruta(
                 id = index + 1,
                 nombre = nombre,
-                urlImagen="https://loremflickr.com/200/200/${nombre}"
+                urlImagen = "https://picsum.photos/200/200?random=$idFruta"
             )
         }
     }
